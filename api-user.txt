@@ -1,0 +1,223 @@
+1.Đăng nhập:
+POST
+/login/user/
+/login/admin/
+data:
+{
+	"username": "tuan",
+	"password": "vuquoctuan"
+}
+True:
+{
+    "status": "success",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJjNWZlZWY5MS1hYzA5LTRmNTYtYTVkZi02OWE5MGY1OTc3ODYiLCJpZCI6IjYzMTQ4MjZGMEEiLCJleHAiOjE1MjY0MzcyOTh9.l0XHBichPGD1ReVlD-fI2ycucoV0KAIOTZgi8ZCQygA"
+}
+False:
+{
+    "status": "error",
+    "message": "Khong the dang nhap"
+}
+2.Đăng ký:
+POST
+/users/register/
+data:
+{
+	"username": "tuan",
+	"password": "123456"
+	"name": "vu quoc tuan",
+	"level": 0
+}
+True:
+{
+    "status": "success",
+    "data": "OK"
+}
+False:
+{
+    "status": "error",
+    "message": "Du lieu khong hop le"
+}
+3.Xem thông tin cơ bản:
+GET
+/users/profile/
+True:
+{
+    "status": "success",
+    "data": {
+        "id": "6314826F0A",
+        "username": "hieu",
+        "password": "",
+        "name": "Pham Trong Hieu",
+        "level": 0
+    }
+}
+4.Xem thong tin Coin cua User
+GET
+/users/coininfo/
+True:
+{
+    "status": "success",
+    "data": [
+        {
+            "id": 5,
+            "value": 70,
+            "userid": "6314826F0A",
+            "coinid": 1
+        },
+        {
+            "id": 6,
+            "value": 230,
+            "userid": "6314826F0A",
+            "coinid": 2
+        },
+        {
+            "id": 7,
+            "value": 150,
+            "userid": "6314826F0A",
+            "coinid": 3
+        },
+        {
+            "id": 8,
+            "value": 180,
+            "userid": "6314826F0A",
+            "coinid": 4
+        }
+    ]
+}
+5.Đặt lệnh
+POST
+/users/datlenh/
+data
+{
+	"fromtypecoin": 1,
+	"fromcoin": 1,
+	"totypecoin": 2,
+	"tocoin": 1
+}
+TRue:
+{
+    "status": "success",
+    "data": "OK"
+}
+False:
+{
+    "status": "error",
+    "message": "Du lieu khong hop le"
+}
+6.Sửa các lệnh đã đặt
+PUT
+/users/sualenh
+data
+{
+	"id": 6,
+	"fromtypecoin": 2,
+	"fromcoin": 50,
+	"totypecoin": 4,
+	"tocoin": 6
+}
+True:
+{
+    "status": "success",
+    "data": "OK"
+}
+False:
+{
+    "status": "error",
+    "message": "Du lieu khong hop le"
+}
+7.Xem tất cả các lệnh đã đặt
+/users/xemlenhdadat/
+GET
+True:
+{
+    "status": "success",
+    "data": [
+        {
+            "id": 5,
+            "fromcoin": 10,
+            "tocoin": 100,
+            "time": "2018-05-13T16:19:56",
+            "status": false,
+            "userid": "5248CB4C2B",
+            "fromtypecoin": 3,
+            "totypecoin": 2
+        },
+        {
+            "id": 6,
+            "fromcoin": 15,
+            "tocoin": 16,
+            "time": "2018-05-13T16:20:05",
+            "status": false,
+            "userid": "5248CB4C2B",
+            "fromtypecoin": 3,
+            "totypecoin": 1
+        },
+        {
+            "id": 7,
+            "fromcoin": 55,
+            "tocoin": 16,
+            "time": "2018-05-13T16:20:10",
+            "status": false,
+            "userid": "5248CB4C2B",
+            "fromtypecoin": 3,
+            "totypecoin": 4
+        },
+        {
+            "id": 8,
+            "fromcoin": 55,
+            "tocoin": 16,
+            "time": "2018-05-13T16:24:14",
+            "status": false,
+            "userid": "5248CB4C2B",
+            "fromtypecoin": 1,
+            "totypecoin": 4
+        }
+    ]
+}
+8.Xem tất cả các lệnh đang chờ
+/users/xemlenhdangcho/
+GET
+True:
+{
+    "status": "success",
+    "data": [
+        {
+            "id": 5,
+            "fromcoin": 10,
+            "tocoin": 100,
+            "time": "2018-05-13T16:19:56",
+            "status": false,
+            "userid": "5248CB4C2B",
+            "fromtypecoin": 3,
+            "totypecoin": 2
+        }
+    ]
+}
+9.Xem tất cả các lệnh đã khớp
+/users/xemlenhdakhop/
+GET
+True:
+{
+    "status": "success",
+    "data": [
+        {
+            "id": 5,
+            "fromcoin": 10,
+            "tocoin": 100,
+            "time": "2018-05-13T16:19:56",
+            "status": false,
+            "userid": "5248CB4C2B",
+            "fromtypecoin": 3,
+            "totypecoin": 2
+        }
+    ]
+}
+
+10. Khop lenh
+POST
+/users/khoplenh/
+True:
+
+False:
+
+

@@ -1,0 +1,19 @@
+1.Danh sach bang gia coin
+GET
+http://127.0.0.1:8000/general/xembanggiacoin/
+
+2.Danh sach giao dich dang cho
+GET
+http://127.0.0.1:8000/general/xemdanhsachgiaodich
+
+3.Xem bang gia chi tiet coin
+POST
+http://127.0.0.1:8000/general/xembangchitietcoin
+data
+{
+"id": 1
+}
+True:
+{}
+False
+return JsonResponse({'message': 'Loi', 'status': 'error'})

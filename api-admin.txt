@@ -1,0 +1,95 @@
+1.Xem bang gia chenh lech
+GET
+/manager/xemgiachenhlech
+{
+    "status": "success",
+    "data": [
+        {
+            "id": 1,
+            "value": 0.01,
+            "fromtypecoin": 1,
+            "totypecoin": 2
+        },
+        {
+            "id": 2,
+            "value": 0.01,
+            "fromtypecoin": 1,
+            "totypecoin": 3
+        },
+        {
+            "id": 3,
+            "value": 0.01,
+            "fromtypecoin": 1,
+            "totypecoin": 4
+        },
+        {
+            "id": 4,
+            "value": 0.01,
+            "fromtypecoin": 2,
+            "totypecoin": 1
+        }
+    ]
+}
+
+2.Sua gia chenh lech
+PUT
+/manager/suagiachenhlech
+data
+{
+	"id":2,
+	"value":12
+}
+True:
+{'status': 'success'}
+False:
+{'message': 'Du lieu khong hop le', 'status': 'error'}
+
+3.Danh sach da giao dich
+GET
+/manager/danhsachdagiaodich
+{
+    "status": "success",
+    "data": [
+        {
+            "id": 10,
+            "fromcoin": 15,
+            "tocoin": 1,
+            "time": "2018-05-13T18:44:16",
+            "status": true,
+            "userid": "5248CB4C2B",
+            "fromtypecoin": 2,
+            "totypecoin": 1
+        },
+        {
+            "id": 5,
+            "fromcoin": 150,
+            "tocoin": 10,
+            "time": "2018-05-13T16:19:56",
+            "status": true,
+            "userid": "5248CB4C2B",
+            "fromtypecoin": 3,
+            "totypecoin": 2
+        },
+        {
+            "id": 4,
+            "fromcoin": 10,
+            "tocoin": 100,
+            "time": "2018-05-13T16:19:08",
+            "status": true,
+            "userid": "6314826F0A",
+            "fromtypecoin": 2,
+            "totypecoin": 3
+        },
+        {
+            "id": 1,
+            "fromcoin": 1,
+            "tocoin": 10,
+            "time": "2018-05-13T16:17:39",
+            "status": true,
+            "userid": "6314826F0A",
+            "fromtypecoin": 1,
+            "totypecoin": 2
+        }
+    ]
+}
+
